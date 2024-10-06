@@ -84,9 +84,29 @@ Testing diffent column variables allowed us to find a positive linear correlatio
 
 ## Question|Task 3
 
-__COPY PASTE QUESTION|TASK 3 FROM THE PROJECT HERE__
+Your final report should also include the markdown table creted from the following (assuming you have mpg from question 2)
 
-- _PROVIDE TABLES THAT HELP ADDRESS THE QUESTIONS AND TASKS (IF APPLICABLE)._
+Now the main question is if the data is reliable? Even though our team tried their hardest, there is just too much data taken that values are missing from the dataset. Therefore, after all our progress, it is our responsability to clean the data to further increase the accuracy of our inquiries.
+
+| species | island    | bill_length_mm | bill_depth_mm | flipper_length_mm | body_mass_g | sex    | year |
+|---------|-----------|----------------|---------------|-------------------|-------------|--------|------|
+| Adelie  | Torgersen | 39.1           | 18.7          | 181.0             | 3750.0      | male   | 2007 |
+| Adelie  | Torgersen | 39.5           | 17.4          | 186.0             | 3800.0      | female | 2007 |
+| Adelie  | Torgersen | 40.3           | 18.0          | 195.0             | 3250.0      | female | 2007 |
+| Adelie  | Torgersen |                |               |                   |             |        | 2007 |
+| Adelie  | Torgersen | 36.7           | 19.3          | 193.0             | 3450.0      | female | 2007 |
+| Adelie  | Torgersen | 39.3           | 20.6          | 190.0             | 3650.0      | male   | 2007 |
+| Adelie  | Torgersen | 38.9           | 17.8          | 181.0             | 3625.0      | female | 2007 |
+| Adelie  | Torgersen | 39.2           | 19.6          | 195.0             | 4675.0      | male   | 2007 |
+| Adelie  | Torgersen | 34.1           | 18.1          | 193.0             | 3475.0      |        | 2007 |
+| Adelie  | Torgersen | 42.0           | 20.2          | 190.0             | 4250.0      |        | 2007 |
+| Adelie  | Torgersen | 37.8           | 17.1          | 186.0             | 3300.0      |        | 2007 |
+| Adelie  | Torgersen | 37.8           | 17.3          | 180.0             | 3700.0      |        | 2007 |
+| Adelie  | Torgersen | 41.1           | 17.6          | 182.0             | 3200.0      | female | 2007 |
+| Adelie  | Torgersen | 38.6           | 21.2          | 191.0             | 3800.0      | male   | 2007 |
+
+
+
 
 
 
