@@ -1,0 +1,110 @@
+---
+title: "Client Report - Project 0"
+subtitle: "Course DS 250"
+author: " Alex Tovar"
+format:
+  html:
+    self-contained: true
+    page-layout: full
+    title-block-banner: true
+    toc: true
+    toc-depth: 3
+    toc-location: body
+    number-sections: false
+    html-math-method: katex
+    code-fold: true
+    code-summary: "Show the code"
+    code-overflow: wrap
+    code-copy: hover
+    code-tools:
+        source: false
+        toggle: true
+        caption: See code
+execute: 
+  warning: false
+    
+---
+
+
+### Elevator pitch
+
+
+We've finally made a breakthrough of the given dataset "Penguins". It was found that there is an linear positive relationship between penguin-species's body mass and the lenght of their flippers. This is an opportunity to possibly leverage the gap in the market, and sell designed flippers targeted to their corresponding species of penguins.
+
+
+__Highlight the Questions and Tasks__
+
+## Question|Task 1
+
+Did you finish the readings and prepared with any questions to get your enviroment working smoothly?
+
+Yes, finished all the readings from project 0. However, I don't have any questions that can't be answered from the reading or documentation. Furthermore, after technical issues I finally got my enviroment working smoothly and without issues as of currently.
+
+
+## Question|Task 2
+
+--Recreate the example chart from PY4DS: CH2 Data Visualization of the textbook.
+
+--Include the table created from PY4DS: CH2 Data Visualization used to create the above chart
+
+- _include figures in chunks and discuss your findings in the figure._
+
+```{python}
+# Import all the necessary libraries to build the plot
+import pandas as pd
+from palmerpenguins import load_penguins
+import numpy as np
+from lets_plot import *
+
+LetsPlot.setup_html()
+```
+
+```{python}
+# assign the imported data to a varible
+penguins = load_penguins()
+
+```
+
+Testing diffent column variables allowed us to find a positive linear correlation, between Body mass(g) and Flipper length(mm). As well, by labeling penguin species, reveal the clusters of the samples in terms of flipper length. Thus, it can be inquired that body weight determined by species, can predit Flipper length in an linear relationship.
+
+```{python}
+# Using lets_plot to make the graph 
+(
+    ggplot(data=penguins, mapping=aes(x="flipper_length_mm", y="body_mass_g"))
+    + geom_point(aes(color="species", shape="species"))
+    + geom_smooth(method="lm")
+    + labs(
+        title="Body mass and flipper length",
+        subtitle="Dimensions for Adelie, Chinstrap, and Gentoo Penguins",
+        x="Flipper length (mm)",
+        y="Body mass (g)",
+        color="Species",
+        shape="Species",
+    )
+)
+```
+
+## Question|Task 3
+
+Your final report should also include the markdown table creted from the following (assuming you have mpg from question 2)
+
+Now the main question is if the data is reliable? Even though our team tried their hardest, there is just too much data taken that values are missing from the dataset. Therefore, after all our progress, it is our responsability to clean the data to further increase the accuracy of our inquiries.
+
+| species | island    | bill_length_mm | bill_depth_mm | flipper_length_mm | body_mass_g | sex    | year |
+|---------|-----------|----------------|---------------|-------------------|-------------|--------|------|
+| Adelie  | Torgersen | 39.1           | 18.7          | 181.0             | 3750.0      | male   | 2007 |
+| Adelie  | Torgersen | 39.5           | 17.4          | 186.0             | 3800.0      | female | 2007 |
+| Adelie  | Torgersen | 40.3           | 18.0          | 195.0             | 3250.0      | female | 2007 |
+| Adelie  | Torgersen |                |               |                   |             |        | 2007 |
+| Adelie  | Torgersen | 36.7           | 19.3          | 193.0             | 3450.0      | female | 2007 |
+| Adelie  | Torgersen | 39.3           | 20.6          | 190.0             | 3650.0      | male   | 2007 |
+| Adelie  | Torgersen | 38.9           | 17.8          | 181.0             | 3625.0      | female | 2007 |
+| Adelie  | Torgersen | 39.2           | 19.6          | 195.0             | 4675.0      | male   | 2007 |
+| Adelie  | Torgersen | 34.1           | 18.1          | 193.0             | 3475.0      |        | 2007 |
+| Adelie  | Torgersen | 42.0           | 20.2          | 190.0             | 4250.0      |        | 2007 |
+| Adelie  | Torgersen | 37.8           | 17.1          | 186.0             | 3300.0      |        | 2007 |
+| Adelie  | Torgersen | 37.8           | 17.3          | 180.0             | 3700.0      |        | 2007 |
+| Adelie  | Torgersen | 41.1           | 17.6          | 182.0             | 3200.0      | female | 2007 |
+| Adelie  | Torgersen | 38.6           | 21.2          | 191.0             | 3800.0      | male   | 2007 |
+
+
