@@ -53,6 +53,7 @@ Yes, finished all the readings from project 0. However, I don't have any questio
 # Import all the necessary libraries to build the plot
 import pandas as pd
 from palmerpenguins import load_penguins
+import numpy as np
 from lets_plot import *
 
 LetsPlot.setup_html()
